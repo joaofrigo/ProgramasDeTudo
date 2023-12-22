@@ -76,7 +76,7 @@ def iniciar():
     
     while dia < diaFinal:
         diaString = converteTempoString(dia)
-        URL = "https://ead06.proj.ufsm.br/nginx-stats/" + diaString + ".html"
+        URL = "exemplo.com" + diaString + ".html"
         request = requests.get(url = URL)
         conteudo = 0 # inicializar fora para evitar problemas de falta de inicialização
         if request.status_code == 200:
