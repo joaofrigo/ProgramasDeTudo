@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  principal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dashboard_docker
+    ports:
+      - "8000:8000"

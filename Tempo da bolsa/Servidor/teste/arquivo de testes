@@ -1,0 +1,70 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+import mysql.connector
+from datetime import datetime, date
+
+class Dashboard:
+    def __init__(self, total_requests=7):
+        # valores da dashboard general:
+        self.total_requests = total_requests
+        self.valid_requests = 0
+        self.requested_files = 0
+        self.failed_requests = 0
+        self.not_found = 0
+        self.unique_visitors = 0
+        self.unique_referrers = 0
+        self.generation_time = 0
+        self.unique_static_files = 0
+        self.excluded_hits = 0
+        self.log_size = 0
+        self.bandwidth = 0
+
+        self.requests = self.dashboard_requests()
+
+    class dashboard_requests:  # Você deve usar "class" para definir uma classe
+        def __init__(self):
+            self.hits_count = 0
+            self.hits_percent = 0
+            self.visitors_count = 0
+            self.visitors_percent = 0
+            self.bytes_count = 0
+            self.bytes_percent = 0
+            self.data = ""
+            self.method = ""
+            self.protocol = ""
+
+def testeclasses():
+    variavel = Dashboard()
+    print(variavel.total_requests, "agora outro numero", variavel.requests.hits_count)
+
+def dashboard_general():
+    connection = mysql.connector.connect(
+    host="nte.ufsm.br",
+    user="ntelogs",
+    password="ntelogs",
+    database="ntelogs"
+    ) # uma função que usaa um dicionário como argumento
+
+    cursor = connection.cursor()
+    codigoSQL = f"""
+    SELECT sum(hits_count), sum(hits_percent), sum(visitors_count), sum(visitors_percent), 
+    sum(bytes_count) , sum(bytes_percent), data
+    FROM ntelogs.dashboard_requests GROUP BY data;
+    """
+    cursor.execute(codigoSQL)
+    resultado = cursor.fetchall()
+    nomes_colunas = cursor.column_names
+    print(nomes_colunas, cursor.column_names)  # Isso imprimirá os nomes das colunas
+    print(resultado)  # Isso imprimirá os valores das tuplas
+
+    cursor.close()
+    connection.close()
+
+def testetupla():
+    tupla = (5, "abc", [1,2,3])
+    print(tupla[2][2])
+
+dashboard_general()
+#testetupla()
+
+

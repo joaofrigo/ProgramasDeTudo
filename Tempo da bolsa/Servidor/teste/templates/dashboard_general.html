@@ -1,0 +1,452 @@
+{% extends "base.html" %}
+
+
+
+{%comment%}
+unique_files 
+bandwidth
+log_size
+excluded_hits
+generation_time
+unique_static_files
+unique_referrers
+unique_visitors
+not_found
+failed_requests
+total_requests
+{%endcomment%}
+
+{%comment%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard general</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <p>requested_files: {{unique_files}}</p>
+    <p>Bandwidth: {{bandwidth}}</p>
+    <p>log_size: {{log_size}}</p>
+    <p>excluded_hits: {{excluded_hits}}</p>
+    <p>generation_time: {{generation_time}}</p>
+    <p>unique_static_files: {{unique_static_files}}</p>
+    <p>unique_referrers: {{unique_referrers}}</p>
+    <p>unique_visitors: {{unique_visitors}}</p>
+    <p>not_found: {{not_found}}</p>
+    <p>failed_requests: {{failed_requests}}</p>
+    <p>total_requests: {{total_requests}}</p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Requested&nbsp;Files</th>
+            <th scope="col">Bandwidth</th>
+            <th scope="col">Excluded Hits</th>
+            <th scope="col">Generation&nbsp;Time</th>
+            <th scope="col">Unique&nbsp;Static&nbsp;Files</th>
+            <th scope="col">Unique&nbsp;Referrers</th>
+            <th scope="col">Unique&nbsp;Visitors</th>
+            <th scope="col">Not&nbsp;found</th>
+            <th scope="col">Failed&nbsp;Requests</th>
+            <th scope="col">Total&nbsp;Requests</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-danger">
+            <th scope="row">1</th>
+            <td>{{unique_files }}</td>
+            <td>{{bandwidth}}</td>
+            <td>{{excluded_hits}}</td>
+            <td>{{generation_time}}</td>
+            <td>{{unique_static_files}}</td>
+            <td>{{unique_referrers}}</td>
+            <td>{{unique_visitors}}</td>
+            <td>{{not_found}}</td>
+            <td>{{failed_requests}}</td>
+            <td>{{total_requests}}</td>
+          </tr>
+          <tr class="table-info">
+            <th scope="row">2</th>
+          </tr>
+          <tr class="table-success">
+            <th scope="row">3</th>
+          </tr>
+        </tbody>
+      </table>
+
+</body>
+</html>
+{%endcomment%}
+
+
+
+
+
+<td>{{data.unique_files }}</td>
+            <td>{{data.bandwidth}}</td>
+            <td>{{data.excluded_hits}}</td>
+            <td>{{data.generation_time}}</td>
+            <td>{{data.unique_static_files}}</td>
+            <td>{{data.unique_referrers}}</td>
+            <td>{{data.unique_visitors}}</td>
+            <td>{{data.not_found}}</td>
+            <td>{{data.failed_requests}}</td>
+            <td>{{data.total_requests}}</td>
+
+
+
+
+
+{% block content %}
+
+<div class="container" style="max-width: 2500px;">
+  <div class="row justify-content-center">
+      
+      <!-- Primeira coluna -->
+      <div class="col-md-2">
+          <div class="bg-dark p-3 mb-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Requested Files</h4>
+              <p>{{data.unique_files }}</p>
+          </div>
+          <div class="bg-dark p-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Bandwidth</h4>
+              <p>{{ data.bandwidth }} GB</p>
+          </div>
+      </div>
+      
+      <!-- Segunda coluna -->
+      <div class="col-md-2 text-center">
+          <div class="bg-dark p-3 mb-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Log Size</h4>
+              <p>{{data.log_size}} GB</p>
+          </div>
+          <div class="bg-dark p-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Excluded Hits</h4>
+              <p>{{data.excluded_hits}}</p>
+          </div>
+      </div>
+      <!-- Terceira coluna -->
+      <div class="col-md-2 text-center">
+          <div class="bg-dark p-3 mb-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Generation time</h4>
+              <p>{{data.generation_time}}</p>
+          </div>
+          <div class="bg-dark p-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Unique Static Files</h4>
+              <p>{{data.unique_static_files}}</p>
+          </div>
+      </div>
+      
+      <!-- Quarta coluna -->
+      <div class="col-md-2 text-center">
+          <div class="bg-dark p-3 mb-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Unique Referrers</h4>
+              <p>{{data.unique_referrers}}</p>
+          </div>
+          <div class="bg-dark p-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Unique visitors</h4>
+              <p>{{data.unique_visitors}}</p>
+          </div>
+      </div>
+      
+      <!-- Quinta coluna -->
+      <div class="col-md-2 text-center">
+          <div class="bg-dark p-3 mb-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Not Found</h4>
+              <p>{{data.not_found}}</p>
+          </div>
+          <div class="bg-dark p-3 rounded shadow" style="color: rgb(255, 255, 255);">
+              <h4>Failed Requests</h4>
+              <p>{{data.failed_requests}}</p>
+          </div>
+      </div>
+      <!-- Sexta coluna -->
+      <div class="col-md-2 text-center">
+        <div class="bg-dark p-3 mb-3 rounded shadow" style="color:rgb(255, 255, 255);">
+            <h4>Valid Requests</h4>
+            <p>{{data.valid_requests}}</p>
+        </div>
+        <div class="bg-dark p-3 rounded shadow" style="color: rgb(255, 255, 255);">
+            <h4>Total Requests</h4>
+            <p>{{data.total_requests}}</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Aqui temos o formulário -->
+<form method="POST" action="{% url 'teste:dashboard_general' %}">
+  {% csrf_token %}
+  <p style="color: antiquewhite;"> Início: </p>
+  <input type="date" name="inicio" placeholder="Número 1">
+  <p style="color: antiquewhite;"> Fim: </p>
+  <input type="date" name="fim" placeholder="Número 2">
+  <p></p>
+  <button type="submit">Filtrar</button>
+</form>
+
+<h2 style="color:white" class="row justify-content-center">Paginação de dashboard_requests</h2>
+<div class="table-responsive">
+    <table class="table" class="table-responsive">
+        <!-- Aqui ficam os nomes das colunas-->
+        <thead class="table-dark" style="font-size: large;">
+            <th>Hits Count</th>
+            <th>Hits Percent</th>
+            <th>Visitors Count</th>
+            <th>Visitors Percent</th>
+            <th>Bytes Count</th>
+            <th>Bytes Percent</th>
+            <th>Data</th>
+            <th>Method</th>
+            <th>Protocol</th>
+        </thead>
+        <!-- Aqui ficam os valores das colunas
+        {{data.unique_files }}-->
+
+        <tbody>
+          {% for objeto in page_objeto %}
+          <tr class="table" style="color:rgb(255, 255, 255); background-color: rgb(95, 39, 148);">
+            <td>{{ objeto.hits_count }}</td>
+            <td>{{ objeto.hits_percent }} %</td>
+            <td>{{ objeto.visitors_count }}</td>
+            <td>{{ objeto.visitors_percent }} %</td>
+            <td>{{ objeto.bytes_count }}</td>
+            <td>{{ objeto.bytes_percent }} %</td>
+            <td>{{ objeto.data }}</td>
+            <td>{{ objeto.method }}</td>
+            <td>{{ objeto.protocol }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+      </table>
+</div>
+
+<!-- Aqui ocorre a paginação, page é o nome do post, poderia ser page_lista_1 por exemplo. -->
+<div class="pagination">
+  <div class="step-links">
+      {% if page_objeto.has_previous %}
+          <a href="?page=1">&laquo; first</a>
+          <a href="?page={{ page_objeto.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current" style="color: brown;">
+          Página {{ page_objeto.number }} de {{ page_objeto.paginator.num_pages }}.
+      </span>
+
+      {% if page_objeto.has_next %}
+          <a href="?page={{ page_objeto.next_page_number }}">next</a>
+          <a href="?page={{ page_objeto.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+    </div>
+</div>
+
+
+<h2 style="color:white" class="row justify-content-center">Paginação de dashboard_http_status_codes</h2>
+<div class="table-responsive">
+    <table class="table">
+        <!-- Aqui ficam os nomes das colunas-->
+        <thead class="table-dark" style="font-size: large;">
+            <tr>
+                <th>Hits Count</th>
+                <th>Hits Percent</th>
+                <th>Visitors Count</th>
+                <th>Visitors Percent</th>
+                <th>Bytes Count</th>
+                <th>Bytes Percent</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <!-- Aqui ficam os valores das colunas -->
+        <tbody>
+          {% for objeto in page_objeto_2 %}
+          <tr class="table" style="color:rgb(255, 255, 255); background-color: rgb(95, 39, 148);">
+            <td>{{ objeto.hits_count }}</td>
+            <td>{{ objeto.hits_percent }} %</td>
+            <td>{{ objeto.visitors_count }}</td>
+            <td>{{ objeto.visitors_percent }} %</td>
+            <td>{{ objeto.bytes_count }}</td>
+            <td>{{ objeto.bytes_percent }} %</td>
+            <td>{{ objeto.data }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Aqui ocorre a paginação, page_2 é o nome do parâmetro, poderia ser page_lista_1 por exemplo. -->
+<div class="pagination">
+    <div class="step-links">
+        {% if page_objeto_2.has_previous %}
+            <a href="?page_2=1">&laquo; first</a>
+            <a href="?page_2={{ page_objeto_2.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current" style="color: brown;">
+            Página {{ page_objeto_2.number }} de {{ page_objeto_2.paginator.num_pages }}.
+        </span>
+
+        {% if page_objeto_2.has_next %}
+            <a href="?page_2={{ page_objeto_2.next_page_number }}">next</a>
+            <a href="?page_2={{ page_objeto_2.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Assim que se faz comentários -->
+
+{% endblock %}
+
+{%comment%}
+
+<!-- meu_app/templates/meu_app/minha_pagina.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Hits Count</th>
+                <th>Hits Percent</th>
+                <th>Visitors Count</th>
+                <th>Visitors Percent</th>
+                <th>Bytes Count</th>
+                <th>Bytes Percent</th>
+                <th>Data</th>
+                <th>Detalhes</th>
+                <!-- Adicione outras colunas conforme necessário -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for objeto in page_objeto %}
+                <tr class="linha-tabela">
+                    <td>{{ objeto.hits_count }}</td>
+                    <td>{{ objeto.hits_percent }}</td>
+                    <td>{{ objeto.visitors_count }}</td>
+                    <td>{{ objeto.visitors_percent }}</td>
+                    <td>{{ objeto.bytes_count }}</td>
+                    <td>{{ objeto.bytes_percent }}</td>
+                    <td>{{ objeto.data }}</td>
+                    <td>
+                        <!-- Adicione um botão ou ícone para acionar a exibição dos detalhes -->
+                        <button class="btn btn-sm btn-info" data-bs-toggle="collapse" data-bs-target="#detalhes{{ objeto.id }}" aria-expanded="false" aria-controls="detalhes{{ objeto.id }}">
+                            Detalhes
+                        </button>
+                        <!-- Lista expansível dos dados extras -->
+                        <div class="collapse" id="detalhes{{ objeto.id }}">
+                            <ul>
+                                {% for item in objeto.items %}
+                                    <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </td>
+                    <!-- Adicione outras colunas conforme necessário -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <div class="step-links">
+            {% if page_objeto.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_objeto.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current" style="color: brown;">
+                Página {{ page_objeto.number }} de {{ page_objeto.paginator.num_pages }}.
+            </span>
+
+            {% if page_objeto.has_next %}
+                <a href="?page={{ page_objeto.next_page_number }}">next</a>
+                <a href="?page={{ page_objeto.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Adicione a funcionalidade retrátil se estiver usando Bootstrap
+        $('.linha-tabela button').click(function () {
+            $(this).next('.collapse').toggle();
+        });
+    });
+</script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  .table td {
+      max-width: 20w; /* Tamanho máximo de célula */
+      font-size: 1.5vw; /* Tamanho da letra */
+  }
+</style>
+  <div class="table-responsive">
+    <table class="table" class="table-responsive">
+
+        <thead class="table-dark" style="font-size: large;">
+            <th>Requested Files</th>
+            <th>Bandwidth</th>
+            <th>Excluded Hits</th>
+            <th>Generation Time</th>
+            <th>UniqueStatic Files</th>
+            <th>Unique Referrers</th>
+            <th>Unique Visitors</th>
+            <th>Not found</th>
+            <th>Failed Requests</th>
+            <th>Total Requests</th>
+        </thead>
+
+        <tbody>
+          <tr class="table-primary">
+            <td>{{data.unique_files }}</td>
+            <td>{{data.bandwidth}}</td>
+            <td>{{data.excluded_hits}}</td>
+            <td>{{data.generation_time}}</td>
+            <td>{{data.unique_static_files}}</td>
+            <td>{{data.unique_referrers}}</td>
+            <td>{{data.unique_visitors}}</td>
+            <td>{{data.not_found}}</td>
+            <td>{{data.failed_requests}}</td>
+            <td>{{data.total_requests}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+  </div>
+
+{%endcomment%}

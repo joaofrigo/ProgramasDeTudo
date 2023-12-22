@@ -1,0 +1,72 @@
+2023-10-16 17:21:24,087 INFO supervisord started with pid 68807
+2023-10-16 17:21:25,091 INFO spawned: 'django' with pid 68810
+2023-10-16 17:21:25,110 INFO exited: django (exit status 2; not expected)
+2023-10-16 17:21:26,115 INFO spawned: 'django' with pid 68811
+2023-10-16 17:21:26,137 INFO exited: django (exit status 2; not expected)
+2023-10-16 17:21:28,143 INFO spawned: 'django' with pid 68812
+2023-10-16 17:21:28,166 INFO exited: django (exit status 2; not expected)
+2023-10-16 17:21:31,174 INFO spawned: 'django' with pid 68815
+2023-10-16 17:21:31,196 INFO exited: django (exit status 2; not expected)
+2023-10-16 17:21:32,198 INFO gave up: django entered FATAL state, too many start retries too quickly
+2023-10-16 17:21:46,219 WARN received SIGINT indicating exit request
+2023-10-16 17:21:48,067 INFO supervisord started with pid 68915
+2023-10-16 17:21:49,070 INFO spawned: 'django' with pid 68916
+2023-10-16 17:21:50,682 INFO success: django entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-16 17:21:53,687 WARN received SIGINT indicating exit request
+2023-10-16 17:21:53,687 INFO waiting for django to die
+2023-10-16 17:21:53,778 INFO stopped: django (exit status 0)
+2023-10-25 16:18:41,411 INFO supervisord started with pid 22884
+2023-10-25 16:18:42,418 INFO spawned: 'celery_scheduler' with pid 22885
+2023-10-25 16:18:42,422 INFO spawned: 'celery_worker' with pid 22886
+2023-10-25 16:18:42,426 INFO spawned: 'django' with pid 22887
+2023-10-25 16:18:42,758 INFO exited: celery_scheduler (exit status 2; not expected)
+2023-10-25 16:18:44,071 INFO spawned: 'celery_scheduler' with pid 22904
+2023-10-25 16:18:44,072 INFO success: celery_worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-25 16:18:44,072 INFO success: django entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-25 16:18:44,319 INFO exited: celery_scheduler (exit status 2; not expected)
+2023-10-25 16:18:46,324 INFO spawned: 'celery_scheduler' with pid 22906
+2023-10-25 16:18:46,533 INFO exited: celery_scheduler (exit status 2; not expected)
+2023-10-25 16:18:49,540 INFO spawned: 'celery_scheduler' with pid 22908
+2023-10-25 16:18:49,753 INFO exited: celery_scheduler (exit status 2; not expected)
+2023-10-25 16:18:50,755 INFO gave up: celery_scheduler entered FATAL state, too many start retries too quickly
+2023-10-25 16:18:52,760 WARN received SIGINT indicating exit request
+2023-10-25 16:18:52,760 INFO waiting for celery_worker, django to die
+2023-10-25 16:18:52,847 INFO stopped: django (exit status 0)
+2023-10-25 16:18:55,659 INFO stopped: celery_worker (exit status 0)
+2023-10-26 15:55:01,753 INFO supervisord started with pid 45480
+2023-10-26 15:55:02,757 INFO spawned: 'celery_scheduler' with pid 45492
+2023-10-26 15:55:02,761 INFO spawned: 'celery_worker' with pid 45493
+2023-10-26 15:55:02,765 INFO spawned: 'django' with pid 45494
+2023-10-26 15:55:03,896 INFO success: celery_scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 15:55:03,896 INFO success: celery_worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 15:55:03,896 INFO success: django entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 16:10:57,587 WARN received SIGINT indicating exit request
+2023-10-26 16:10:57,587 INFO waiting for celery_scheduler, celery_worker, django to die
+2023-10-26 16:10:57,678 INFO stopped: django (exit status 0)
+2023-10-26 16:10:59,940 INFO stopped: celery_worker (exit status 0)
+2023-10-26 16:11:00,053 INFO stopped: celery_scheduler (exit status 0)
+2023-10-26 16:13:30,060 INFO supervisord started with pid 47915
+2023-10-26 16:13:31,064 INFO spawned: 'celery_scheduler' with pid 47929
+2023-10-26 16:13:31,067 INFO spawned: 'celery_worker' with pid 47930
+2023-10-26 16:13:31,071 INFO spawned: 'django' with pid 47931
+2023-10-26 16:13:33,035 INFO success: celery_scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 16:13:33,035 INFO success: celery_worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 16:13:33,035 INFO success: django entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 16:27:40,401 WARN received SIGINT indicating exit request
+2023-10-26 16:27:40,402 INFO waiting for celery_scheduler, celery_worker, django to die
+2023-10-26 16:27:40,516 INFO stopped: django (exit status 0)
+2023-10-26 16:27:42,880 INFO stopped: celery_worker (exit status 0)
+2023-10-26 16:27:43,007 INFO stopped: celery_scheduler (exit status 0)
+2023-10-26 16:36:27,513 INFO supervisord started with pid 52161
+2023-10-26 16:36:28,516 INFO spawned: 'celery_scheduler' with pid 52176
+2023-10-26 16:36:28,520 INFO spawned: 'celery_worker' with pid 52177
+2023-10-26 16:36:28,523 INFO spawned: 'django' with pid 52178
+2023-10-26 16:36:29,514 INFO success: celery_scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 16:36:29,518 INFO success: celery_worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 16:36:30,520 INFO success: django entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 16:39:16,317 WARN received SIGINT indicating exit request
+2023-10-26 16:39:16,317 INFO waiting for celery_scheduler, celery_worker, django to die
+2023-10-26 16:39:16,436 INFO stopped: django (exit status 0)
+2023-10-26 16:39:19,409 INFO stopped: celery_worker (exit status 0)
+2023-10-26 16:39:19,409 INFO waiting for celery_scheduler to die
+2023-10-26 16:39:19,526 INFO stopped: celery_scheduler (exit status 0)

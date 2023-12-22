@@ -1,0 +1,28 @@
+cd /home/joao/Downloads/gitbucket/Servidor
+_____________________________
+ativar ambiente virtual
+
+source ambiente_teste/bin/activate
+_____________________________
+(Projeto é onde fica o celery.py)
+
+Script para o worker:
+
+cd /home/joao/Downloads/Pasta\ gitbucket
+source virtual/bin/activate
+cd /home/joao/Downloads/Pasta\ gitbucket/Servidor
+celery -A Meu_projeto worker -l info
+
+Script para beat:
+cd /home/joao/Downloads/Pasta\ gitbucket
+source virtual/bin/activate
+cd /home/joao/Downloads/Pasta\ gitbucket/Servidor
+celery -A Meu_projeto beat -l info 
+
+_____________________________
+
+cd "C:\Users\FATEC\Desktop\Estudos joão\GitCodigos\ntelogs\Servidor DJANGO"
+py manage.py runserver
+(ou python3 manage.py runserver)
+
+_____________________________
