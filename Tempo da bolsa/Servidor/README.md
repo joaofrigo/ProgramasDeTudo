@@ -3,17 +3,17 @@
 # Documentação da dashboard-nginx
 
 
-O objetivo desse conjunto de código é o de exibir uma dashboard com os valores da dashboard nginx: https://ead06.proj.ufsm.br/nginx-stats/. Com intuito de manter os dados de maneira mais constante em um banco de dados nosso e com a possibilidade de melhora e manutenção de uma dashboard feita com código próprio. Assim servindo como uma dashboard sucessora.
+O objetivo desse conjunto de código é o de exibir uma dashboard com os valores da dashboard bibubga: bobinho.com. Com intuito de manter os dados de maneira mais constante em um banco de dados nosso e com a possibilidade de melhora e manutenção de uma dashboard feita com código próprio. Assim servindo como uma dashboard sucessora.
 
 Códigos iniciais produzidos: Foram criados vários scripts iniciais que estão dentro da pasta “Códigos Python”, e na subpasta de “SQL scripts dentro do python” que contém scripts iniciais da conexão com mysql connector do python com o banco de dados. Esses scripts podem ser rodados individualmente sem problemas, eles modificam a base de dados (no caso iniciam ela com os dados da dashboard antiga), ou manipulam os dados para algum propósito:
 
-* CriaJsonExemplo: cria um exemplo de arquivo JSON extraido da dashboard nginx. (útil para entender a estrutura do JSON separadamente do código). O nome do arquivo é “conteudo”. A fonte do JSON é diretamente da dashboard nginx.
+* CriaJsonExemplo: cria um exemplo de arquivo JSON extraido da dashboard nginx. (útil para entender a estrutura do JSON separadamente do código). O nome do arquivo é “conteudo”. A fonte do JSON é diretamente da dashboard.
 
 * DecodificadorJson: Soma os valores de todos os JSONS adquiridos através do banco de dados e printa o resultado.
 
-* ParserReal: Adquire todos os JSONS de todos os dias da dashboard-nginx e os coloca dentro de um arquivo chamado “conteudo”
+* ParserReal: Adquire todos os JSONS de todos os dias da dashboard e os coloca dentro de um arquivo chamado “conteudo”
 
-* ParserSQL: Funcionalmente igual o ParserReal, a diferença é que não escreve no arquivo, mas insere no banco de dados SQL dentro da table “Json”. Todos os dias da dashboard-nginx até o dia de hoje serão inseridos. (repete inserções, não pode usar quantas vezes quiser)
+* ParserSQL: Funcionalmente igual o ParserReal, a diferença é que não escreve no arquivo, mas insere no banco de dados SQL dentro da table “Json”. Todos os dias da dashboard até o dia de hoje serão inseridos. (repete inserções, não pode usar quantas vezes quiser)
 
 * ParserSQLcomdata: Funcionalmente similar o ParserSQL. A diferença é que esse é um parser que insere valores no banco de dados  mais atual no sentido de que uma segunda informação é adicionada no Json chamada “data”. Usando data, se verifica se aquele Json já existe na table, impedindo a repetição dentro do banco de dados dos valores Json. Ele também calcula o tempo que demorou para cada processo relevante, útil para o debug relacionado à otimização 
 
@@ -55,7 +55,6 @@ Pontos importantes para o servidor funcionar:
 
 * Para resetar a imagem do docker-compose ao iniciar é só usar o comando ““sudo docker-compose up --build -d” para que a imagem seja feita novamente, como também seja rodado em segundo plano.
 
-* O site que o servidor é aberto na máquina externa é o http://nte.ufsm.br:8000/teste/dashboard_general/ na máquina local é só o http://localhost:8000/teste/dashboard_general/ é também importante que o docker-compose na máquina externa (remota) seja chamado com sudo.
 
 
 
