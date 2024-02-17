@@ -1,0 +1,5 @@
+<map id="CadastroAluno" name="CadastroAluno">
+<area shape="rect" id="Node000001" title="Representa o cadastro de alunos com suporte aos padrões Singleton, Decorator com uso também de funçõe..." alt="" coords="5,165,181,491"/>
+<area shape="rect" id="Node000002" href="$interface_subject.html" title="Interface para um subject no contexto do padrão Observer." alt="" coords="17,5,170,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,132,96,166,91,166,91,132"/>
+</map>

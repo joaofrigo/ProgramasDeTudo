@@ -97,10 +97,10 @@ def iniciar():
     tempoFinal = 0
 
     connection = mysql.connector.connect(
-    host="nte.ufsm.br",
-    user="ntelogs",
-    password="ntelogs",
-    database="ntelogs"
+    host="",
+    user="",
+    password="",
+    database=""
     ) # uma única conexão para governar todas
     cursor = connection.cursor() # o cursor rei
 

@@ -1,0 +1,36 @@
+[33mcommit ec3ce24e62d59f270f75c4bd0460bda90f0976f4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: joão marcos <joaofrigo1@gmail.com>
+Date:   Wed Dec 6 04:05:40 2023 -0300
+
+    06/12
+
+[33mcommit a4b967c4a8240868ead826f9acdb80932c34ec30[m
+Merge: 89da09b5 b9b07c4e
+Author: joão marcos <joaofrigo1@gmail.com>
+Date:   Tue Nov 21 21:42:51 2023 -0300
+
+    Merge branch 'main' of https://github.com/joaofrigo/ProgramasDeTudo
+
+[33mcommit 89da09b5428bb5345c4589ad983da08a53d8a8c7[m
+Author: joão marcos <joaofrigo1@gmail.com>
+Date:   Tue Nov 21 21:39:43 2023 -0300
+
+    truco
+
+[33mcommit b9b07c4e607fd30a585f8c1f14e41d0e3ea494f0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: joaofrigo <92951251+joaofrigo@users.noreply.github.com>
+Date:   Sun Nov 19 18:16:52 2023 -0300
+
+    Update README.md
+
+[33mcommit 63a496e46e43d52f40c233aa98f59c976d814b8c[m
+Author: joão marcos <joaofrigo1@gmail.com>
+Date:   Tue Nov 14 01:53:36 2023 -0300
+
+    mensagem
+
+[33mcommit 8408d101fe1ec5bcb6c5f74218e96b784a2a7b66[m
+Author: joaofrigo <92951251+joaofrigo@users.noreply.github.com>
+Date:   Sun Oct 15 22:30:29 2023 -0300
+
+    Initial commit

@@ -1,0 +1,280 @@
+\doxysection{Cadastro\+Aluno Class Reference}
+\hypertarget{class_cadastro_aluno}{}\label{class_cadastro_aluno}\index{CadastroAluno@{CadastroAluno}}
+
+
+Representa o cadastro de alunos com suporte aos padrões Singleton, Decorator com uso também de funções Factory Method e Strategy.  
+
+
+
+
+Inheritance diagram for Cadastro\+Aluno\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_cadastro_aluno__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cadastro\+Aluno\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_cadastro_aluno__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aluno}{Aluno}} \mbox{\hyperlink{class_cadastro_aluno_a53f924885422a9e7eba9630f9faf7fd7}{criar\+Aluno\+Com\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Cria um novo aluno com base nas informações fornecidas pelo usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aluno_a1619d5785e7b166af00fc4d45cf96faa}{add\+Observer}} (\mbox{\hyperlink{interface_observer}{Observer}} observer)
+\begin{DoxyCompactList}\small\item\em Adiciona um observador à lista de observadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aluno_a76cef43e83b4cc4eda1339ff539af3b6}{remove\+Observer}} (\mbox{\hyperlink{interface_observer}{Observer}} observer)
+\begin{DoxyCompactList}\small\item\em Remove um observador da lista de observadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aluno_a7a936223bf62e89023373a303aa43e57}{notify\+Aluno\+Observers}} (\mbox{\hyperlink{class_aluno}{Aluno}} aluno)
+\begin{DoxyCompactList}\small\item\em Notifica todos os observadores sobre o novo aluno cadastrado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aluno_a499b45e1e2f69beb2d6f72486481e2df}{cadastrar\+Aluno}} (\mbox{\hyperlink{class_aluno}{Aluno}} aluno, String criterio\+Validacao)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo aluno, aplicando estratégias de validação com base no critério fornecido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aluno_a61490d8902bc61e86372c71b3590799f}{listar\+Alunos}} ()
+\begin{DoxyCompactList}\small\item\em Lista os alunos cadastrados, utilizando a estratégia de detalhes configurada com decorator. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_aluno}{Aluno}} $>$ \mbox{\hyperlink{class_cadastro_aluno_adca08ed3435d1770a1296ab255691fb4}{get\+Alunos}} ()
+\begin{DoxyCompactList}\small\item\em Obtém uma cópia da lista de alunos cadastrados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastro_aluno_a68f77327d48daa2601bedcce8f02324e}{set\+Detalhes\+Aluno}} (\mbox{\hyperlink{interface_detalhes_aluno}{Detalhes\+Aluno}} detalhes\+Aluno)
+\begin{DoxyCompactList}\small\item\em Define a estratégia de detalhes a ser utilizada no cadastro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_aluno}{Aluno}} \mbox{\hyperlink{class_cadastro_aluno_a28a1acbb23cd20a532f66253d4884330}{buscar\+Aluno\+Por\+Nome}} (String nome)
+\begin{DoxyCompactList}\small\item\em Busca um aluno cadastrado pelo nome. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_aluno}{Aluno}} \mbox{\hyperlink{class_cadastro_aluno_a76193a46abfff1fabe73cdf86f9ae951}{buscar\+Aluno\+Por\+Curso}} (String curso)
+\begin{DoxyCompactList}\small\item\em Busca um aluno cadastrado pelo curso. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_aluno}{Aluno}} \mbox{\hyperlink{class_cadastro_aluno_a3282b5a9b8cff415eb1ffca170e1b65b}{buscar\+Aluno\+Por\+Email}} (String email)
+\begin{DoxyCompactList}\small\item\em Busca um aluno cadastrado pelo email de contato. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_aluno}{Aluno}} \mbox{\hyperlink{class_cadastro_aluno_a80a63a63d55239f9e2354666f6d0d232}{buscar\+Aluno\+Por\+Matricula}} (int matricula)
+\begin{DoxyCompactList}\small\item\em Busca um aluno cadastrado pela matrícula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_cadastro_aluno}{Cadastro\+Aluno}} \mbox{\hyperlink{class_cadastro_aluno_ae2a69d4379cd5c09fd5cd37fec26eba3}{get\+Instancia}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a instância única do \doxylink{class_cadastro_aluno}{Cadastro\+Aluno}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o cadastro de alunos com suporte aos padrões Singleton, Decorator com uso também de funções Factory Method e Strategy. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cadastro_aluno_a1619d5785e7b166af00fc4d45cf96faa}\label{class_cadastro_aluno_a1619d5785e7b166af00fc4d45cf96faa} 
+\index{CadastroAluno@{CadastroAluno}!addObserver@{addObserver}}
+\index{addObserver@{addObserver}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{addObserver()}{addObserver()}}
+{\footnotesize\ttfamily void Cadastro\+Aluno.\+add\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_observer}{Observer}}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adiciona um observador à lista de observadores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & O observador a ser adicionado. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_subject_ae0e37c8c52a74f8977f669542b002674}{Subject}}.
+
+\Hypertarget{class_cadastro_aluno_a76193a46abfff1fabe73cdf86f9ae951}\label{class_cadastro_aluno_a76193a46abfff1fabe73cdf86f9ae951} 
+\index{CadastroAluno@{CadastroAluno}!buscarAlunoPorCurso@{buscarAlunoPorCurso}}
+\index{buscarAlunoPorCurso@{buscarAlunoPorCurso}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{buscarAlunoPorCurso()}{buscarAlunoPorCurso()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aluno}{Aluno}} Cadastro\+Aluno.\+buscar\+Aluno\+Por\+Curso (\begin{DoxyParamCaption}\item[{String}]{curso }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca um aluno cadastrado pelo curso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curso} & O curso do aluno a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O aluno encontrado ou null se não encontrado. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastro_aluno_a3282b5a9b8cff415eb1ffca170e1b65b}\label{class_cadastro_aluno_a3282b5a9b8cff415eb1ffca170e1b65b} 
+\index{CadastroAluno@{CadastroAluno}!buscarAlunoPorEmail@{buscarAlunoPorEmail}}
+\index{buscarAlunoPorEmail@{buscarAlunoPorEmail}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{buscarAlunoPorEmail()}{buscarAlunoPorEmail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aluno}{Aluno}} Cadastro\+Aluno.\+buscar\+Aluno\+Por\+Email (\begin{DoxyParamCaption}\item[{String}]{email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca um aluno cadastrado pelo email de contato. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & O email de contato do aluno a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O aluno encontrado ou null se não encontrado. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastro_aluno_a80a63a63d55239f9e2354666f6d0d232}\label{class_cadastro_aluno_a80a63a63d55239f9e2354666f6d0d232} 
+\index{CadastroAluno@{CadastroAluno}!buscarAlunoPorMatricula@{buscarAlunoPorMatricula}}
+\index{buscarAlunoPorMatricula@{buscarAlunoPorMatricula}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{buscarAlunoPorMatricula()}{buscarAlunoPorMatricula()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aluno}{Aluno}} Cadastro\+Aluno.\+buscar\+Aluno\+Por\+Matricula (\begin{DoxyParamCaption}\item[{int}]{matricula }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca um aluno cadastrado pela matrícula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matricula} & A matrícula do aluno a ser buscada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O aluno encontrado ou null se não encontrado. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastro_aluno_a28a1acbb23cd20a532f66253d4884330}\label{class_cadastro_aluno_a28a1acbb23cd20a532f66253d4884330} 
+\index{CadastroAluno@{CadastroAluno}!buscarAlunoPorNome@{buscarAlunoPorNome}}
+\index{buscarAlunoPorNome@{buscarAlunoPorNome}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{buscarAlunoPorNome()}{buscarAlunoPorNome()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aluno}{Aluno}} Cadastro\+Aluno.\+buscar\+Aluno\+Por\+Nome (\begin{DoxyParamCaption}\item[{String}]{nome }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca um aluno cadastrado pelo nome. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & O nome do aluno a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O aluno encontrado ou null se não encontrado. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastro_aluno_a499b45e1e2f69beb2d6f72486481e2df}\label{class_cadastro_aluno_a499b45e1e2f69beb2d6f72486481e2df} 
+\index{CadastroAluno@{CadastroAluno}!cadastrarAluno@{cadastrarAluno}}
+\index{cadastrarAluno@{cadastrarAluno}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{cadastrarAluno()}{cadastrarAluno()}}
+{\footnotesize\ttfamily void Cadastro\+Aluno.\+cadastrar\+Aluno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aluno}{Aluno}}}]{aluno,  }\item[{String}]{criterio\+Validacao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cadastra um novo aluno, aplicando estratégias de validação com base no critério fornecido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aluno} & O aluno a ser cadastrado. \\
+\hline
+{\em criterio\+Validacao} & O critério de validação a ser aplicado. Escolha entre "{}curso"{}, "{}idade"{} e "{}matricula"{}  \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cadastro_aluno_a53f924885422a9e7eba9630f9faf7fd7}\label{class_cadastro_aluno_a53f924885422a9e7eba9630f9faf7fd7} 
+\index{CadastroAluno@{CadastroAluno}!criarAlunoComInput@{criarAlunoComInput}}
+\index{criarAlunoComInput@{criarAlunoComInput}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{criarAlunoComInput()}{criarAlunoComInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aluno}{Aluno}} Cadastro\+Aluno.\+criar\+Aluno\+Com\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cria um novo aluno com base nas informações fornecidas pelo usuário. 
+
+\begin{DoxyReturn}{Returns}
+O aluno criado. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastro_aluno_adca08ed3435d1770a1296ab255691fb4}\label{class_cadastro_aluno_adca08ed3435d1770a1296ab255691fb4} 
+\index{CadastroAluno@{CadastroAluno}!getAlunos@{getAlunos}}
+\index{getAlunos@{getAlunos}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{getAlunos()}{getAlunos()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_aluno}{Aluno}} $>$ Cadastro\+Aluno.\+get\+Alunos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém uma cópia da lista de alunos cadastrados. 
+
+\begin{DoxyReturn}{Returns}
+Uma lista de alunos cadastrados. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastro_aluno_ae2a69d4379cd5c09fd5cd37fec26eba3}\label{class_cadastro_aluno_ae2a69d4379cd5c09fd5cd37fec26eba3} 
+\index{CadastroAluno@{CadastroAluno}!getInstancia@{getInstancia}}
+\index{getInstancia@{getInstancia}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{getInstancia()}{getInstancia()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_cadastro_aluno}{Cadastro\+Aluno}} Cadastro\+Aluno.\+get\+Instancia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obtém a instância única do \doxylink{class_cadastro_aluno}{Cadastro\+Aluno}. 
+
+\begin{DoxyReturn}{Returns}
+A instância única do \doxylink{class_cadastro_aluno}{Cadastro\+Aluno}. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastro_aluno_a61490d8902bc61e86372c71b3590799f}\label{class_cadastro_aluno_a61490d8902bc61e86372c71b3590799f} 
+\index{CadastroAluno@{CadastroAluno}!listarAlunos@{listarAlunos}}
+\index{listarAlunos@{listarAlunos}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{listarAlunos()}{listarAlunos()}}
+{\footnotesize\ttfamily void Cadastro\+Aluno.\+listar\+Alunos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista os alunos cadastrados, utilizando a estratégia de detalhes configurada com decorator. 
+
+\Hypertarget{class_cadastro_aluno_a7a936223bf62e89023373a303aa43e57}\label{class_cadastro_aluno_a7a936223bf62e89023373a303aa43e57} 
+\index{CadastroAluno@{CadastroAluno}!notifyAlunoObservers@{notifyAlunoObservers}}
+\index{notifyAlunoObservers@{notifyAlunoObservers}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{notifyAlunoObservers()}{notifyAlunoObservers()}}
+{\footnotesize\ttfamily void Cadastro\+Aluno.\+notify\+Aluno\+Observers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aluno}{Aluno}}}]{aluno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Notifica todos os observadores sobre o novo aluno cadastrado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aluno} & O aluno recém-\/cadastrado. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_subject_a8f28f793bbfece06f49f1bb1be09e036}{Subject}}.
+
+\Hypertarget{class_cadastro_aluno_a76cef43e83b4cc4eda1339ff539af3b6}\label{class_cadastro_aluno_a76cef43e83b4cc4eda1339ff539af3b6} 
+\index{CadastroAluno@{CadastroAluno}!removeObserver@{removeObserver}}
+\index{removeObserver@{removeObserver}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{removeObserver()}{removeObserver()}}
+{\footnotesize\ttfamily void Cadastro\+Aluno.\+remove\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_observer}{Observer}}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um observador da lista de observadores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & O observador a ser removido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_subject_a371fff1b2e16672806a0ddabdf3ccc0b}{Subject}}.
+
+\Hypertarget{class_cadastro_aluno_a68f77327d48daa2601bedcce8f02324e}\label{class_cadastro_aluno_a68f77327d48daa2601bedcce8f02324e} 
+\index{CadastroAluno@{CadastroAluno}!setDetalhesAluno@{setDetalhesAluno}}
+\index{setDetalhesAluno@{setDetalhesAluno}!CadastroAluno@{CadastroAluno}}
+\doxysubsubsection{\texorpdfstring{setDetalhesAluno()}{setDetalhesAluno()}}
+{\footnotesize\ttfamily void Cadastro\+Aluno.\+set\+Detalhes\+Aluno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_detalhes_aluno}{Detalhes\+Aluno}}}]{detalhes\+Aluno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define a estratégia de detalhes a ser utilizada no cadastro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em detalhes\+Aluno} & A estratégia de detalhes a ser configurada no decorator. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cadastro_aluno_8java}{Cadastro\+Aluno.\+java}}\end{DoxyCompactItemize}

@@ -1,10 +1,10 @@
 import mysql.connector
 
 connection = mysql.connector.connect(
-  host="localhost",
-  user="FATEC",
-  password="serverEaD",
-  database="jsonparsed"
+  host="",
+  user="",
+  password="",
+  database=""
 ) # uma função que usaa um dicionário como argumento
 
 cursor = connection.cursor()

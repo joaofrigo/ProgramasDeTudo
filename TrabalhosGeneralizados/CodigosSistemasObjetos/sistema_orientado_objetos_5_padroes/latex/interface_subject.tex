@@ -1,0 +1,103 @@
+\doxysection{Subject Interface Reference}
+\hypertarget{interface_subject}{}\label{interface_subject}\index{Subject@{Subject}}
+
+
+Interface para um subject no contexto do padrão \doxylink{interface_observer}{Observer}.  
+
+
+
+
+Inheritance diagram for Subject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{interface_subject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Subject\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{interface_subject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_subject_ae0e37c8c52a74f8977f669542b002674}{add\+Observer}} (\mbox{\hyperlink{interface_observer}{Observer}} observer)
+\begin{DoxyCompactList}\small\item\em Adiciona um observador à lista de observadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_subject_a371fff1b2e16672806a0ddabdf3ccc0b}{remove\+Observer}} (\mbox{\hyperlink{interface_observer}{Observer}} observer)
+\begin{DoxyCompactList}\small\item\em Remove um observador da lista de observadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_subject_a8f28f793bbfece06f49f1bb1be09e036}{notify\+Aluno\+Observers}} (\mbox{\hyperlink{class_aluno}{Aluno}} aluno)
+\begin{DoxyCompactList}\small\item\em Notifica todos os observadores sobre um evento relacionado a um aluno sendo adicionado na lista do Cadastra\+Aluno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface para um subject no contexto do padrão \doxylink{interface_observer}{Observer}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_subject_ae0e37c8c52a74f8977f669542b002674}\label{interface_subject_ae0e37c8c52a74f8977f669542b002674} 
+\index{Subject@{Subject}!addObserver@{addObserver}}
+\index{addObserver@{addObserver}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{addObserver()}{addObserver()}}
+{\footnotesize\ttfamily void Subject.\+add\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_observer}{Observer}}}]{observer }\end{DoxyParamCaption})}
+
+
+
+Adiciona um observador à lista de observadores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & O observador a ser adicionado. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cadastro_aluno_a1619d5785e7b166af00fc4d45cf96faa}{Cadastro\+Aluno}}.
+
+\Hypertarget{interface_subject_a8f28f793bbfece06f49f1bb1be09e036}\label{interface_subject_a8f28f793bbfece06f49f1bb1be09e036} 
+\index{Subject@{Subject}!notifyAlunoObservers@{notifyAlunoObservers}}
+\index{notifyAlunoObservers@{notifyAlunoObservers}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{notifyAlunoObservers()}{notifyAlunoObservers()}}
+{\footnotesize\ttfamily void Subject.\+notify\+Aluno\+Observers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aluno}{Aluno}}}]{aluno }\end{DoxyParamCaption})}
+
+
+
+Notifica todos os observadores sobre um evento relacionado a um aluno sendo adicionado na lista do Cadastra\+Aluno. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aluno} & O objeto \doxylink{class_aluno}{Aluno} envolvido no evento. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cadastro_aluno_a7a936223bf62e89023373a303aa43e57}{Cadastro\+Aluno}}.
+
+\Hypertarget{interface_subject_a371fff1b2e16672806a0ddabdf3ccc0b}\label{interface_subject_a371fff1b2e16672806a0ddabdf3ccc0b} 
+\index{Subject@{Subject}!removeObserver@{removeObserver}}
+\index{removeObserver@{removeObserver}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{removeObserver()}{removeObserver()}}
+{\footnotesize\ttfamily void Subject.\+remove\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_observer}{Observer}}}]{observer }\end{DoxyParamCaption})}
+
+
+
+Remove um observador da lista de observadores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & O observador a ser removido. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cadastro_aluno_a76cef43e83b4cc4eda1339ff539af3b6}{Cadastro\+Aluno}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_subject_8java}{Subject.\+java}}\end{DoxyCompactItemize}

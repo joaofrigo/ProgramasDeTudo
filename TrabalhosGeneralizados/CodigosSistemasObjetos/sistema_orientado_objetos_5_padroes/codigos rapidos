@@ -1,0 +1,3 @@
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+cd "C:\Programacao\ProgramasDeTudo\TrabalhosGeneralizados\CodigosSistemasObjetos\sistema_orientado_objetos_5_padroes"
+java -jar plantuml-lgpl-1.2023.13.jar -version

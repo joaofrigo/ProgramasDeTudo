@@ -23,10 +23,10 @@ def insereSQL(conteudo, URL):
 
 def inserirOuNao(counteudo):
     connection = mysql.connector.connect(
-    host="nte.ufsm.br",
-    user="ntelogs",
-    password="ntelogs",
-    database="ntelogs"
+    host="",
+    user="",
+    password="",
+    database=""
     ) # uma função que usa um dicionário como argumento
 
     cursor = connection.cursor()

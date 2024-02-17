@@ -1,0 +1,43 @@
+@startuml diagrama de criar com input e strategy
+actor Usuário
+participant Main
+participant CadastroAluno
+participant Scanner
+participant Aluno
+note over CadastroAluno: <<Singleton>>
+note over IdadeValidacaoStrategyFactory: <<Factory Method e Strategy>>
+
+activate Main
+
+Usuário -> Main: Escolhe opção 2
+activate CadastroAluno
+Main -> CadastroAluno: criarAlunoComInput()
+
+activate Scanner
+CadastroAluno -> Scanner: Digite o nome do aluno
+Scanner --> CadastroAluno: Nome do aluno digitado
+
+CadastroAluno -> Scanner: Digite a matrícula do aluno
+Scanner --> CadastroAluno: Matrícula do aluno digitada
+
+CadastroAluno -> Scanner: Digite o endereço do aluno
+Scanner --> CadastroAluno: Endereço do aluno digitado
+
+CadastroAluno -> Scanner: Digite a idade do aluno
+Scanner --> CadastroAluno: Idade do aluno digitada
+deactivate Scanner
+
+Main -> CadastroAluno: cadastrarAluno(aluno, "idade")
+
+note over CadastroAluno: Validar a idade do aluno
+
+CadastroAluno -> CadastroAluno: obterFactoryPorCriterio("idade")
+CadastroAluno -> IdadeValidacaoStrategyFactory: new IdadeValidacaoStrategyFactory()
+IdadeValidacaoStrategyFactory -> IdadeValidacaoStrategy: criarValidacaoStrategy()
+IdadeValidacaoStrategy -> IdadeValidacaoStrategy: Validar a idade
+IdadeValidacaoStrategy --> CadastroAluno: Resultado da validação
+
+Main --> Usuário: Exibir mensagem de sucesso ou erro
+
+deactivate CadastroAluno
+@enduml

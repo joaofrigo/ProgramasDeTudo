@@ -1,0 +1,35 @@
+@startuml diagramaUsandoDecoratorDetalhado
+participant Main
+participant CadastroAluno
+participant AlunoDetalhadoDecorator
+participant DetalhesAluno
+participant Aluno
+
+note over CadastroAluno: <<Singleton>>
+note over AlunoDetalhadoDecorator: <<Decorator>>
+
+activate Main
+
+Main -> CadastroAluno: getInstancia()
+activate CadastroAluno
+
+Main -> CadastroAluno: setDetalhesAluno(new AlunoDetalhadoDecorator())
+activate AlunoDetalhadoDecorator
+
+AlunoDetalhadoDecorator -> DetalhesAluno: mostrarDetalhes(aluno)
+DetalhesAluno -> Aluno: getNome()
+DetalhesAluno -> Aluno: getMatricula()
+DetalhesAluno -> Aluno: getCurso()
+DetalhesAluno -> Aluno: getEndereco()
+DetalhesAluno -> Aluno: getIdade()
+DetalhesAluno -> Aluno: getEmail_contato()
+
+deactivate AlunoDetalhadoDecorator
+
+Main -> CadastroAluno: listarAlunos()
+CadstroAluno -> CadastroAluno: detalhesAluno.mostrarDetalhes(aluno)
+
+deactivate CadastroAluno
+
+deactivate Main
+@enduml

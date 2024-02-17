@@ -14,7 +14,7 @@ tempoSoma = datetime.timedelta(days= 1)
 numeroFalhas = 0
 while dia < diaFinal:
     diaString = converteTempoString(dia)
-    URL = "https://ead06.proj.ufsm.br/nginx-stats/" + diaString + ".html"
+    URL = "" + diaString + ".html"
     request = requests.get(url = URL)
     if request.status_code == 200:
         soup = BeautifulSoup(request.text, "lxml")

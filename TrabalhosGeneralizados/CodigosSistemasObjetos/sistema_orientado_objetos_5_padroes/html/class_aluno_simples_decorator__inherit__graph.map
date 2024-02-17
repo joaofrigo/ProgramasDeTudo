@@ -1,0 +1,6 @@
+<map id="AlunoSimplesDecorator" name="AlunoSimplesDecorator">
+<area shape="rect" id="Node000001" title="implementa a interface DetalhesAluno para mostrar detalhes simplificados de um aluno,..." alt="" coords="5,144,155,213"/>
+<area shape="rect" id="Node000002" href="$interface_detalhes_aluno.html" title="Interface para mostrar detalhes de um aluno no contexto do padrão Decorator." alt="" coords="17,5,143,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,111,75,144,69,144,68,111"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="92,111,91,144,85,144,86,111"/>
+</map>

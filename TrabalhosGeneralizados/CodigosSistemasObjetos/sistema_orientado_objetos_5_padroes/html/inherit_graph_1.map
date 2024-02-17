@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$interface_detalhes_aluno.html" title="Interface para mostrar detalhes de um aluno no contexto do padrão Decorator." alt="" coords="5,31,111,57"/>
+<area shape="rect" id="Node000001" href="$class_aluno_detalhado_decorator.html" title="implementa a interface DetalhesAluno para mostrar detalhes aprimorados de um aluno,..." alt="" coords="159,5,327,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="126,32,158,28,159,33,126,37"/>
+<area shape="rect" id="Node000002" href="$class_aluno_simples_decorator.html" title="implementa a interface DetalhesAluno para mostrar detalhes simplificados de um aluno,..." alt="" coords="164,56,322,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="127,51,164,56,163,61,126,56"/>
+</map>

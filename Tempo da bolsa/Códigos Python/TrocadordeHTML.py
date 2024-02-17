@@ -165,10 +165,10 @@ DataVisitors = []
 
 def selectSQL():
     connection = mysql.connector.connect(
-    host="localhost",
-    user="FATEC",
-    password="serverEaD",
-    database="jsonparsed"
+    host="",
+    user="",
+    password="",
+    database=""
     )
 
     cursor = connection.cursor()

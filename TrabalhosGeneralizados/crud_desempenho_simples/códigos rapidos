@@ -1,0 +1,11 @@
+.\virtual\Scripts\Activate
+Set-ExecutionPolicy RemoteSigned -Scope Process (para criar os scripts, como manage.py e ativar ambientes virtuais)
+cd "C:\Programacao\ProgramasDeTudo\TrabalhosGeneralizados\crud desempenho simples\projeto_CRUD_DESEMPENHO" (preciso estar na pasta correta)
+
+código junto:
+
+cd "C:\Programacao\ProgramasDeTudo\TrabalhosGeneralizados\crud_desempenho_simples"
+Set-ExecutionPolicy RemoteSigned -Scope Process
+.\virtual\Scripts\Activate
+
+python manage.py runserver

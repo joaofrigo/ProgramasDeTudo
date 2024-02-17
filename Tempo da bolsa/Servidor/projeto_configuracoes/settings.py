@@ -24,15 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8(1mp!=7+ppzg@*8p9eallm0r&upb#kyq(cz@=l@o#c+xojlgm'
+# SECRET_KEY =
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # antes era True
 
-#ALLOWED_HOSTS = ['nte.ufsm.br', '200.18.45.8', '.localhost', '127.0.0.1', '[::1]']
 ALLOWED_HOSTS = []
-# 'nte.ufsm.br:8000', 'nte.ufsm.br', '200.18.45.8'
 # Com o debug em falso, precisamos permitir os hosts que usamos.
 
 
