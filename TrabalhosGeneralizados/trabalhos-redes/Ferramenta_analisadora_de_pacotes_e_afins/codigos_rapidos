@@ -1,0 +1,20 @@
+cd "C:\Users\joaof\Desktop\trabalho_redes\trabalho-redes\Ferramenta_analisadora_de_pacotes_e_afins"
+Set-ExecutionPolicy RemoteSigned -Scope Process
+virtual\Scripts\activate
+
+cd "C:\Users\joaof\Desktop\trabalho_redes\trabalho-redes\Ferramenta_analisadora_de_pacotes_e_afins"
+python manage.py runserver
+
+http://127.0.0.1:8000/charts/index/ (esse é a url padrão, o charts vai depois pro charts):
+http://127.0.0.1:8000/charts/charts/ (é importante manter o /)
+(pode ser diferente em outros pc, o manage.py avisa qual é o link para entrar, depois inserimos manualmente url)
+
+instalar npcaps (possivelmente)
+instalar wireshark (tshark primordialmente que é o formato em linha de código)
+Agora com wireshark, colocamos no PATH do sistema o lugar que se localiza o executável tshark (onde fica o wireshark também)
+pyshark é a integração do wireshark usando o thsark para o python
+
+para rodar o código, entre na pasta do projeto e escreva no terminal: python manage.py runserver (caso não de, use o comando 
+abaixo do cd, o set policy antes de usar tanto o ambiente virtual como o manage.py)
+
+Instruções, identificar quais trabalhos já fizemos

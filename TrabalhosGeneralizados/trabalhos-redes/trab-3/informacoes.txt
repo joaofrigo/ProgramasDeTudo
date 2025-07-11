@@ -1,0 +1,1 @@
+preciso instalar cisco packet tracer para conseguir pacotes RIP, já que ninguém usa mais, preciso simular.

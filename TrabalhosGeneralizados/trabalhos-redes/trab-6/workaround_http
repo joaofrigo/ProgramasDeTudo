@@ -1,0 +1,93 @@
+import pyshark
+from collections import Counter
+import pickle
+
+def capturar_pacotes(file_path):
+    print("entrando em capturar pacotes")
+    capture = pyshark.FileCapture(file_path, display_filter='tls')
+    pacotes = list(capture)  # Lê todos os pacotes do arquivo e armazena em uma lista
+    capture.close()  # Fecha o FileCapture após ler todos os pacotes
+    print("terminando em capturar pacotes")
+    return pacotes
+
+def salvar_pacotes_em_arquivo(pacotes, file_path):
+    print("entrando em salvar pacotes")
+    with open(file_path, 'wb') as f:
+        pickle.dump(pacotes, f)
+    print("terminando em salvar pacotes")
+
+def carregar_pacotes_do_arquivo(file_path):
+    with open(file_path, 'rb') as f:
+        pacotes = pickle.load(f)
+    return pacotes
+
+def analise_http(pacotes):
+    # Lê pacotes de um arquivo PCAP e analisa os pacotes TLS para HTTPS
+    captura_arquivo = pacotes
+    tls_versions = Counter()
+    content_types = Counter()
+    application_protocols = Counter()
+
+    pacotes_tls = []
+
+    for pacote in captura_arquivo:
+        try:
+            # Verifica se o pacote TLS contém o campo "record content type"
+            if hasattr(pacote.tls, 'record_content_type'):
+                # Extrai informações relevantes do pacote TLS
+                info_pacote = {
+                    'timestamp': pacote.sniff_time,
+                    'source_ip': pacote.ip.src,
+                    'destination_ip': pacote.ip.dst,
+                    'tls_version': pacote.tls.record_version,
+                    'content_type': pacote.tls.record_content_type,
+                    'application_data_protocol': pacote.tls.record_protocol if hasattr(pacote.tls, 'record_protocol') else None
+                }
+
+                # Verifica se o protocolo de dados da aplicação é HTTP
+                if info_pacote['application_data_protocol'] == 'http':
+                    pacotes_tls.append(info_pacote)
+                
+                # Contagem das versões TLS
+                tls_versions[pacote.tls.record_version] += 1
+                
+                # Contagem dos tipos de conteúdo
+                content_types[pacote.tls.record_content_type] += 1
+
+                # Contagem dos protocolos de dados da aplicação
+                if info_pacote['application_data_protocol']:
+                    application_protocols[info_pacote['application_data_protocol']] += 1
+
+        except AttributeError:
+            # Ignora pacotes que não possuem o campo TLS
+            pass
+
+    return {
+        "pacotes_tls": pacotes_tls,
+        "tls_versions": tls_versions.most_common(5),
+        "content_types": content_types.most_common(5),
+    }
+
+
+# Captura e salva os pacotes em um arquivo
+file_path = 'pacotes_http_lidos.pcap'
+#pacotes = capturar_pacotes('captura_https.pcap')
+#salvar_pacotes_em_arquivo(pacotes, file_path)
+
+# Carrega os pacotes do arquivo e realiza a análise
+pacotes_carregados = carregar_pacotes_do_arquivo(file_path)
+resultado_analise = analise_http(pacotes_carregados)
+
+print("Pacotes TLS Capturados com HTTP:")
+for info_pacote in resultado_analise["pacotes_tls"]:
+    print(info_pacote)
+
+print("\nTop 5 Versões TLS:")
+for version, count in resultado_analise["tls_versions"]:
+    print(f"Versão TLS: {version}, Count: {count}")
+
+print("\nTop 5 Tipos de Conteúdo TLS:")
+for content_type, count in resultado_analise["content_types"]:
+    print(f"Content Type: {content_type}, Count: {count}")
+
+
