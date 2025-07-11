@@ -1,0 +1,985 @@
+[
+    {
+        "compra": 1,
+        "produtos": [
+            "Queijo Mussarela",
+            "Café Iguaçú",
+            "Refri - Pepsi"
+        ]
+    },
+    {
+        "compra": 2,
+        "produtos": [
+            "Queijo Minas",
+            "Pão Gajeta",
+            "Doce Leite"
+        ]
+    },
+    {
+        "compra": 3,
+        "produtos": [
+            "Presunto Seara",
+            "Pão Cabrito",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 4,
+        "produtos": [
+            "Pão Cabrito",
+            "Presunto Sadia",
+            "Pastel Queijo",
+            "Queijo Minas"
+        ]
+    },
+    {
+        "compra": 5,
+        "produtos": [
+            "Doce Amendoim",
+            "Refri - Pepsi",
+            "Pão Gajeta"
+        ]
+    },
+    {
+        "compra": 6,
+        "produtos": [
+            "Refri - Pepsi",
+            "Café Melita"
+        ]
+    },
+    {
+        "compra": 7,
+        "produtos": [
+            "Café Nestle",
+            "Pastel Queijo"
+        ]
+    },
+    {
+        "compra": 8,
+        "produtos": [
+            "Queijo Mussarela",
+            "Pastel Frango",
+            "Pão Gajeta",
+            "Doce Leite"
+        ]
+    },
+    {
+        "compra": 9,
+        "produtos": [
+            "Pastel Queijo",
+            "Pão Francês",
+            "Refri - Fanta",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 10,
+        "produtos": [
+            "Doce Goiabada",
+            "Refri - Fanta",
+            "Pão Gajeta",
+            "Pastel Carne"
+        ]
+    },
+    {
+        "compra": 11,
+        "produtos": [
+            "Pão Cabrito",
+            "Queijo Mussarela",
+            "Pastel Frango"
+        ]
+    },
+    {
+        "compra": 12,
+        "produtos": [
+            "Doce Leite",
+            "Café Melita"
+        ]
+    },
+    {
+        "compra": 13,
+        "produtos": [
+            "Refri - Coca Cola",
+            "Queijo Mussarela",
+            "Café Nestle",
+            "Pastel Carne"
+        ]
+    },
+    {
+        "compra": 14,
+        "produtos": [
+            "Presunto Seara",
+            "Doce Goiabada",
+            "Café Melita"
+        ]
+    },
+    {
+        "compra": 15,
+        "produtos": [
+            "Refri - Pepsi",
+            "Café Nestle",
+            "Presunto Sadia",
+            "Pão Gajeta"
+        ]
+    },
+    {
+        "compra": 16,
+        "produtos": [
+            "Café Iguaçú",
+            "Presunto Perdigão",
+            "Refri - Pepsi",
+            "Pão Francês"
+        ]
+    },
+    {
+        "compra": 17,
+        "produtos": [
+            "Queijo Lanche",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 18,
+        "produtos": [
+            "Pastel Queijo",
+            "Queijo Mussarela",
+            "Pão Francês",
+            "Refri - Coca Cola"
+        ]
+    },
+    {
+        "compra": 19,
+        "produtos": [
+            "Refri - Coca Cola",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 20,
+        "produtos": [
+            "Doce Amendoim",
+            "Pão Cabrito",
+            "Café Iguaçú",
+            "Refri - Coca Cola"
+        ]
+    },
+    {
+        "compra": 21,
+        "produtos": [
+            "Pão Cabrito",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 22,
+        "produtos": [
+            "Pastel Presunto e Queijo",
+            "Refri - Pepsi"
+        ]
+    },
+    {
+        "compra": 23,
+        "produtos": [
+            "Pastel Frango",
+            "Café Melita"
+        ]
+    },
+    {
+        "compra": 24,
+        "produtos": [
+            "Café Melita",
+            "Queijo Minas",
+            "Pastel Queijo"
+        ]
+    },
+    {
+        "compra": 25,
+        "produtos": [
+            "Doce Goiabada",
+            "Pastel Frango"
+        ]
+    },
+    {
+        "compra": 26,
+        "produtos": [
+            "Pastel Queijo",
+            "Presunto Seara",
+            "Doce Goiabada",
+            "Queijo Minas"
+        ]
+    },
+    {
+        "compra": 27,
+        "produtos": [
+            "Café Melita",
+            "Presunto Seara",
+            "Refri - Coca Cola",
+            "Pão Francês"
+        ]
+    },
+    {
+        "compra": 28,
+        "produtos": [
+            "Pastel Presunto e Queijo",
+            "Refri - Pepsi"
+        ]
+    },
+    {
+        "compra": 29,
+        "produtos": [
+            "Pastel Carne",
+            "Doce Leite"
+        ]
+    },
+    {
+        "compra": 30,
+        "produtos": [
+            "Presunto Sadia",
+            "Pastel Queijo",
+            "Doce Goiabada",
+            "Queijo Minas"
+        ]
+    },
+    {
+        "compra": 31,
+        "produtos": [
+            "Café Iguaçú",
+            "Pastel Carne",
+            "Refri - Coca Cola"
+        ]
+    },
+    {
+        "compra": 32,
+        "produtos": [
+            "Presunto Sadia",
+            "Café Melita",
+            "Pastel Queijo",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 33,
+        "produtos": [
+            "Pastel Frango",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 34,
+        "produtos": [
+            "Doce Amendoim",
+            "Pão Francês",
+            "Presunto Sadia",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 35,
+        "produtos": [
+            "Presunto Sadia",
+            "Queijo Mussarela",
+            "Doce Amendoim",
+            "Café Melita"
+        ]
+    },
+    {
+        "compra": 36,
+        "produtos": [
+            "Pastel Frango",
+            "Queijo Lanche",
+            "Pão Francês",
+            "Café Nestle"
+        ]
+    },
+    {
+        "compra": 37,
+        "produtos": [
+            "Refri - Coca Cola",
+            "Queijo Mussarela",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 38,
+        "produtos": [
+            "Presunto Sadia",
+            "Queijo Minas",
+            "Refri - Pepsi"
+        ]
+    },
+    {
+        "compra": 39,
+        "produtos": [
+            "Doce Amendoim",
+            "Presunto Sadia",
+            "Pastel Frango"
+        ]
+    },
+    {
+        "compra": 40,
+        "produtos": [
+            "Doce Amendoim",
+            "Café Iguaçú",
+            "Pastel Carne"
+        ]
+    },
+    {
+        "compra": 41,
+        "produtos": [
+            "Pastel Queijo",
+            "Pão Francês",
+            "Doce Leite",
+            "Presunto Seara"
+        ]
+    },
+    {
+        "compra": 42,
+        "produtos": [
+            "Pastel Queijo",
+            "Café Iguaçú",
+            "Queijo Minas"
+        ]
+    },
+    {
+        "compra": 43,
+        "produtos": [
+            "Refri - Coca Cola",
+            "Pastel Frango",
+            "Pão Gajeta",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 44,
+        "produtos": [
+            "Refri - Coca Cola",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 45,
+        "produtos": [
+            "Queijo Minas",
+            "Doce Amendoim",
+            "Pão Gajeta"
+        ]
+    },
+    {
+        "compra": 46,
+        "produtos": [
+            "Queijo Lanche",
+            "Refri - Coca Cola"
+        ]
+    },
+    {
+        "compra": 47,
+        "produtos": [
+            "Pastel Frango",
+            "Doce Leite",
+            "Pão Gajeta"
+        ]
+    },
+    {
+        "compra": 48,
+        "produtos": [
+            "Pastel Presunto e Queijo",
+            "Refri - Pepsi"
+        ]
+    },
+    {
+        "compra": 49,
+        "produtos": [
+            "Doce Leite",
+            "Pão Francês",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 50,
+        "produtos": [
+            "Doce Goiabada",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 51,
+        "produtos": [
+            "Presunto Seara",
+            "Café Nestle"
+        ]
+    },
+    {
+        "compra": 52,
+        "produtos": [
+            "Pastel Frango",
+            "Doce Amendoim"
+        ]
+    },
+    {
+        "compra": 53,
+        "produtos": [
+            "Presunto Seara",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 54,
+        "produtos": [
+            "Pastel Queijo",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 55,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 56,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 57,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 58,
+        "produtos": [
+            "Doce Leite",
+            "Pastel Carne",
+            "Queijo Mussarela",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 59,
+        "produtos": [
+            "Pão Francês",
+            "Doce Amendoim",
+            "Refri - Fanta",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 60,
+        "produtos": [
+            "Queijo Lanche",
+            "Pastel Carne"
+        ]
+    },
+    {
+        "compra": 61,
+        "produtos": [
+            "Queijo Mussarela",
+            "Café Melita",
+            "Pastel Queijo",
+            "Doce Goiabada"
+        ]
+    },
+    {
+        "compra": 62,
+        "produtos": [
+            "Queijo Mussarela",
+            "Doce Goiabada",
+            "Café Melita",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 63,
+        "produtos": [
+            "Café Melita",
+            "Pão Cabrito",
+            "Refri - Pepsi",
+            "Doce Leite"
+        ]
+    },
+    {
+        "compra": 64,
+        "produtos": [
+            "Pastel Queijo",
+            "Café Melita"
+        ]
+    },
+    {
+        "compra": 65,
+        "produtos": [
+            "Pão Francês",
+            "Refri - Coca Cola",
+            "Queijo Mussarela",
+            "Pastel Queijo"
+        ]
+    },
+    {
+        "compra": 66,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 67,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 68,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 69,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 70,
+        "produtos": [
+            "Café Melita",
+            "Queijo Minas",
+            "Pastel Carne",
+            "Pão Francês"
+        ]
+    },
+    {
+        "compra": 71,
+        "produtos": [
+            "Queijo Minas",
+            "Pão Francês",
+            "Doce Amendoim"
+        ]
+    },
+    {
+        "compra": 72,
+        "produtos": [
+            "Pastel Queijo",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 73,
+        "produtos": [
+            "Refri - Pepsi",
+            "Queijo Mussarela",
+            "Doce Amendoim"
+        ]
+    },
+    {
+        "compra": 74,
+        "produtos": [
+            "Pastel Queijo",
+            "Café Iguaçú",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 75,
+        "produtos": [
+            "Doce Goiabada",
+            "Presunto Sadia",
+            "Refri - Coca Cola",
+            "Pão Gajeta"
+        ]
+    },
+    {
+        "compra": 76,
+        "produtos": [
+            "Café Iguaçú",
+            "Doce Amendoim",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 77,
+        "produtos": [
+            "Pão Gajeta",
+            "Presunto Seara",
+            "Café Melita"
+        ]
+    },
+    {
+        "compra": 78,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 79,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 80,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 81,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Sadia"
+        ]
+    },
+    {
+        "compra": 82,
+        "produtos": [
+            "Queijo Mussarela",
+            "Presunto Perdigão",
+            "Doce Amendoim",
+            "Pastel Queijo"
+        ]
+    },
+    {
+        "compra": 83,
+        "produtos": [
+            "Doce Amendoim",
+            "Pastel Frango",
+            "Refri - Fanta",
+            "Café Nestle"
+        ]
+    },
+    {
+        "compra": 84,
+        "produtos": [
+            "Doce Goiabada",
+            "Refri - Coca Cola",
+            "Pão Cabrito"
+        ]
+    },
+    {
+        "compra": 85,
+        "produtos": [
+            "Café Iguaçú",
+            "Pastel Carne",
+            "Refri - Coca Cola"
+        ]
+    },
+    {
+        "compra": 86,
+        "produtos": [
+            "Queijo Lanche",
+            "Presunto Sadia",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 87,
+        "produtos": [
+            "Pastel Queijo",
+            "Café Melita",
+            "Doce Leite",
+            "Refri - Pepsi"
+        ]
+    },
+    {
+        "compra": 88,
+        "produtos": [
+            "Pão Cabrito",
+            "Presunto Seara",
+            "Pastel Carne",
+            "Queijo Lanche"
+        ]
+    },
+    {
+        "compra": 89,
+        "produtos": [
+            "Queijo Mussarela",
+            "Refri - Fanta",
+            "Doce Goiabada"
+        ]
+    },
+    {
+        "compra": 90,
+        "produtos": [
+            "Queijo Lanche",
+            "Presunto Perdigão"
+        ]
+    },
+    {
+        "compra": 91,
+        "produtos": [
+            "Queijo Mussarela",
+            "Presunto Seara",
+            "Pão Cabrito"
+        ]
+    },
+    {
+        "compra": 92,
+        "produtos": [
+            "Queijo Lanche",
+            "Presunto Perdigão",
+            "Pão Cabrito"
+        ]
+    },
+    {
+        "compra": 93,
+        "produtos": [
+            "Queijo Mussarela",
+            "Presunto Seara",
+            "Pão Cabrito"
+        ]
+    },
+    {
+        "compra": 94,
+        "produtos": [
+            "Presunto Seara",
+            "Pão Gajeta",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 95,
+        "produtos": [
+            "Queijo Minas",
+            "Pastel Carne"
+        ]
+    },
+    {
+        "compra": 96,
+        "produtos": [
+            "Queijo Minas",
+            "Doce Goiabada",
+            "Pastel Frango"
+        ]
+    },
+    {
+        "compra": 97,
+        "produtos": [
+            "Pão Francês",
+            "Café Melita",
+            "Doce Leite",
+            "Pastel Queijo"
+        ]
+    },
+    {
+        "compra": 98,
+        "produtos": [
+            "Pão Gajeta",
+            "Queijo Mussarela",
+            "Presunto Sadia",
+            "Pastel Carne"
+        ]
+    },
+    {
+        "compra": 99,
+        "produtos": [
+            "Café Iguaçú",
+            "Refri - Coca Cola",
+            "Doce Goiabada",
+            "Presunto Seara"
+        ]
+    },
+    {
+        "compra": 100,
+        "produtos": [
+            "Pastel Queijo",
+            "Café Iguaçú"
+        ]
+    },
+    {
+        "compra": 101,
+        "produtos": [
+            "Queijo Mussarela",
+            "Presunto Seara",
+            "Pão Cabrito"
+        ]
+    },
+    {
+        "compra": 102,
+        "produtos": [
+            "Presunto Perdigão",
+            "Doce Leite",
+            "Queijo Minas"
+        ]
+    },
+    {
+        "compra": 103,
+        "produtos": [
+            "Pão Cabrito",
+            "Refri - Pepsi",
+            "Pastel Frango"
+        ]
+    },
+    {
+        "compra": 104,
+        "produtos": [
+            "Doce Amendoim",
+            "Pão Francês",
+            "Presunto Seara",
+            "Queijo Lanche"
+        ]
+    },
+    {
+        "compra": 105,
+        "produtos": [
+            "Pastel Carne",
+            "Doce Leite"
+        ]
+    },
+    {
+        "compra": 106,
+        "produtos": [
+            "Café Iguaçú",
+            "Queijo Mussarela",
+            "Doce Goiabada",
+            "Pastel Frango"
+        ]
+    },
+    {
+        "compra": 107,
+        "produtos": [
+            "Pastel Queijo",
+            "Pão Gajeta"
+        ]
+    },
+    {
+        "compra": 108,
+        "produtos": [
+            "Pastel Frango",
+            "Café Iguaçú"
+        ]
+    },
+    {
+        "compra": 109,
+        "produtos": [
+            "Pastel Queijo",
+            "Presunto Seara",
+            "Café Máquina"
+        ]
+    },
+    {
+        "compra": 110,
+        "produtos": [
+            "Refri - Fanta",
+            "Café Nestle",
+            "Doce Goiabada"
+        ]
+    },
+    {
+        "compra": 111,
+        "produtos": [
+            "Doce Goiabada",
+            "Café Melita",
+            "Queijo Mussarela"
+        ]
+    },
+    {
+        "compra": 112,
+        "produtos": [
+            "Doce Goiabada",
+            "Refri - Fanta",
+            "Pão Sovado"
+        ]
+    },
+    {
+        "compra": 113,
+        "produtos": [
+            "Presunto Seara",
+            "Café Nestle",
+            "Pão Gajeta"
+        ]
+    },
+    {
+        "compra": 114,
+        "produtos": [
+            "Pastel Carne",
+            "Refri - Coca Cola"
+        ]
+    },
+    {
+        "compra": 115,
+        "produtos": [
+            "Refri - Pepsi",
+            "Pastel Carne"
+        ]
+    },
+    {
+        "compra": 116,
+        "produtos": [
+            "Café Máquina",
+            "Doce Goiabada"
+        ]
+    },
+    {
+        "compra": 117,
+        "produtos": [
+            "Pastel Frango",
+            "Refri - Coca Cola"
+        ]
+    },
+    {
+        "compra": 118,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Perdigão",
+            "Café Máquina"
+        ]
+    },
+    {
+        "compra": 119,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Perdigão",
+            "Café Nestle"
+        ]
+    },
+    {
+        "compra": 120,
+        "produtos": [
+            "Pão Francês",
+            "Queijo Mussarela",
+            "Presunto Perdigão",
+            "Café Nestle"
+        ]
+    },
+    {
+        "compra": 121,
+        "produtos": [
+            "Pastel Frango",
+            "Refri - Fanta"
+        ]
+    },
+    {
+        "compra": 122,
+        "produtos": [
+            "Pastel Presunto e Queijo",
+            "Refri - Pepsi"
+        ]
+    },
+    {
+        "compra": 123,
+        "produtos": [
+            "Pastel Presunto e Queijo",
+            "Refri - Pepsi"
+        ]
+    }
+]
