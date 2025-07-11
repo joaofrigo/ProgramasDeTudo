@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Localização</title>
+    <!-- CSS do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+        crossorigin=""/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding-top: 20px;
+        }
+
+        /* Botão de menu */
+        .sidebar .menu-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        .sidebar .active {
+            background-color: #555;
+        }
+
+        /* Conteúdo principal */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .main-content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Mapa */
+        #map {
+            height: 300px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra lateral -->
+    {% include 'sidebar.html' %}
+
+    <div class="main-content">
+        <h2>Editar Localização</h2>
+
+        {% if error %}
+            <div style="color: red; text-align: center; margin-bottom: 10px;">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <form action="{% url 'editar_localizacao' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="id_localizacao" value="{{ localizacao.id_ubicaciones }}">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="{{ localizacao.nombre }}" required>
+
+            <label for="coordenadas">Coordenadas (clique no mapa):</label>
+            <div id="map"></div>
+            <input type="text" id="coordenadas" name="coordenadas" value="{{ localizacao.coordenadas }}" readonly placeholder="Clique no mapa para selecionar"><br><br>
+
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" value="{{ localizacao.descripcion }}">
+
+            <label for="tipo_ubicacao">Tipo de Localização:</label>
+            <select id="tipo_ubicacao" name="tipo_ubicacao">
+                <option value="urbana" {% if localizacao.tipo_ubicacion == 'urbana' %}selected{% endif %}>Urbana</option>
+                <option value="rural" {% if localizacao.tipo_ubicacion == 'rural' %}selected{% endif %}>Rural</option>
+                <option value="industrial" {% if localizacao.tipo_ubicacion == 'industrial' %}selected{% endif %}>Industrial</option>
+                <option value="comercial" {% if localizacao.tipo_ubicacion == 'comercial' %}selected{% endif %}>Comercial</option>
+            </select>
+
+            <label for="capacidade">Capacidade:</label>
+            <input type="text" id="capacidade" name="capacidade" value="{{ localizacao.capacidad }}">
+
+            <button type="submit">Atualizar Localização</button>
+        </form>
+    </div>
+
+    <!-- Incluindo o Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+        crossorigin=""></script>
+
+    <script>
+        // Inicializa o mapa
+        var map = L.map('map').setView([-23.55052, -46.633308], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker; 
+
+        // Função para capturar as coordenadas ao clicar no mapa
+        function updateCoordinates(lat, lon) {
+            document.getElementById('coordenadas').value = 'Latitude: ' + lat.toFixed(6) + ', Longitude: ' + lon.toFixed(6);
+
+            if (marker) {
+                map.removeLayer(marker);
+            }
+
+            marker = L.marker([lat, lon]).addTo(map);
+        }
+
+        map.on('click', function(e) {
+            var lat = e.latlng.lat;
+            var lon = e.latlng.lng;
+
+            updateCoordinates(lat, lon);
+        });
+
+        // Se houver coordenadas iniciais, posiciona no mapa
+        {% if localizacao.coordenadas %}
+            var coords = "{{ localizacao.coordenadas }}".split(',');
+            var lat = parseFloat(coords[0].split(':')[1]);
+            var lon = parseFloat(coords[1].split(':')[1]);
+
+            map.setView([lat, lon], 13);
+            marker = L.marker([lat, lon]).addTo(map);
+            document.getElementById('coordenadas').value = 'Latitude: ' + lat.toFixed(6) + ', Longitude: ' + lon.toFixed(6);
+        {% endif %}
+    </script>
+</body>
+
+</html>
