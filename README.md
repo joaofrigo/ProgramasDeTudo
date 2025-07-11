@@ -1,4 +1,5 @@
 # ProgramasDeTudo
-O repositório de todos os programas feitos por minha autoria.
-(E trabalhos generalizados de faculdade com ou sem códigos não feitos por minha autoria)
-Nome: João Marcos Wilhelms Frigo
+
+Repositório com diversos programas desenvolvidos por **João Marcos Wilhelms Frigo**.
+
+Alguns trabalhos acadêmicos foram realizados em grupo e podem conter trechos de código produzidos por colegas de faculdade. Quando aplicável, isso será indicado na respectiva pasta do trabalho.
