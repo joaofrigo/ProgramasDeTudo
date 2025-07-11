@@ -1,0 +1,2 @@
+sudo mysql -u root -p
+mudar o ipv4 antes de ir
