@@ -1,0 +1,1 @@
+Os nomes das pastas dos trabalhos representam os integrantes.
