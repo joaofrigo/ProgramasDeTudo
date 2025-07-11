@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <style>
+    .representacao_lutador {
+      display: inline-block;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #FFF2E7;
+      background-color: #8FBC8F;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+      max-width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: background-color 0.3s ease;
+    }
+
+    .representacao_lutador:hover {
+      background-color: #036633;
+      color: #FFF2E7;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="conteudo-principal">
+    <h1 class="conteudo-principal-escrito-titulo">Lista de Lutadores</h1>
+    <div class="conteudo-principal-escrito-secao-botao">
+      <a href="{% url 'criar_lutador' %}">
+        <button class="conteudo-principal-escrito-botao">Adicionar Lutador</button>
+      </a>
+      <a href="{% url 'adicionar_golpe' %}">
+        <button class="conteudo-principal-escrito-botao">Adicionar Golpe</button>
+      </a>
+      <a href="{% url 'lista_golpes' %}">
+        <button class="conteudo-principal-escrito-botao">Lista de Golpes</button>
+      </a>
+      <a href="{% url 'logout' %}">
+        <button class="conteudo-principal-escrito-botao">Logout</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="conteudo-secundario">
+    {% if lutadores %}
+      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; margin: 0 auto;">
+        {% for lutador in lutadores %}
+          <li style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+            <a href="{% url 'ver_lutador' lutador.id_lutador %}" class="representacao_lutador" title="{{ lutador.nome }}">
+              {{ lutador.nome }}
+            </a>
+            <form action="{% url 'remover_lutador' lutador.id_lutador %}" method="post" style="margin: 0;" onsubmit="return confirm('Tem certeza que deseja remover este lutador?');">
+              {% csrf_token %}
+              <button type="submit" class="conteudo2-botao-excluir">Remover</button>
+            </form>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="conteudo-secundario-paragrafo">Nenhum lutador encontrado.</p>
+    {% endif %}
+  </div>
+{% endblock %}

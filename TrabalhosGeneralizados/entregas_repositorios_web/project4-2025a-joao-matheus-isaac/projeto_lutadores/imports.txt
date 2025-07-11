@@ -1,0 +1,61 @@
+import os
+import sys
+        from django.core.management import execute_from_command_line
+import os
+from django.contrib import admin
+from django.apps import AppConfig
+import json
+from channels.generic.websocket import AsyncWebsocketConsumer
+import redis.asyncio as redis
+from asgiref.sync import sync_to_async
+import os
+import sys
+import requests
+from dotenv import load_dotenv
+from django.shortcuts import redirect
+from django.urls import reverse
+from django.conf import settings
+from django.db import models
+from django.urls import re_path
+from . import consumers
+from django.test import TestCase
+from django.contrib import admin
+from django.urls import include, path
+from .views import *
+from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from urllib.parse import urlencode
+from django.conf import settings
+import requests
+import os
+from dotenv import load_dotenv
+from supabase import create_client
+from urllib.parse import urlparse
+from .models import *
+from .gera import gerar_imagem_flux
+from pathlib import Path
+from django.shortcuts import render, get_object_or_404
+from .models import Lutador
+import os
+from dotenv import load_dotenv
+from supabase import create_client
+from pathlib import Path
+import django.db.models.deletion
+from django.db import migrations, models
+from django.db import migrations, models
+from django.db import migrations, models
+from channels.sessions import SessionMiddlewareStack
+from channels.routing import ProtocolTypeRouter, URLRouter
+from app_lutadores.routing import websocket_urlpatterns
+from django.core.asgi import get_asgi_application
+import os
+from pathlib import Path
+import os
+from dotenv import load_dotenv
+from django.contrib import admin
+from django.urls import path, include # Include não incluido
+import os
+from django.core.wsgi import get_wsgi_application

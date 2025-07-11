@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Editando Lutador{% endblock %}
+
+
+{% block content %}
+<header class="cabecalho2">
+    <div class="conteudo-principal">
+    <h1 class="conteudo-principal-escrito-titulo">{{ lutador.nome }}</h1>
+</header>
+
+<main class="conteudo2">
+<form method="post" action="{% url 'editar_lutador' lutador.id_lutador %}">
+  {% csrf_token %}
+  
+  <label>Nome:
+    <input type="text" name="nome" value="{{ lutador.nome }}" required/>
+  </label>
+  
+  <label>Idade:
+    <input type="number" name="idade" value="{{ lutador.idade }}" min="-2147483648" max="2147483647" required/>
+  </label>
+  
+  <label>Profissão:
+    <input type="text" name="profissao" value="{{ lutador.profissao }}" />
+  </label>
+
+<style>
+    .checkbox-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;          /* igual aos inputs */
+    padding: 0.5rem;             /* igual aos inputs */
+    max-height: 150px;           /* permite scroll vertical */
+    overflow-y: auto;
+    width: 100%;                 /* ocupa a largura do pai, igual inputs */
+    color: black;
+    font-size: 1rem;             /* igual ao input */
+    box-sizing: border-box;      /* para respeitar padding e largura */
+    }
+
+    .checkbox-container label {
+    display: block;
+    padding: 0.25rem 0;
+    cursor: pointer;
+    color: black;
+    font-weight: normal;         /* para não ficar muito forte */
+    }
+</style>
+
+
+<label>Amizades:</label>
+<div class="checkbox-container">
+  {% if lutadores|length == 0 %}
+    <p>Não há lutadores cadastrados.</p>
+  {% else %}
+    {% for l in lutadores %}
+      {% if l != lutador %}
+        <label>
+          <input type="checkbox" name="amizades" value="{{ l.id_lutador }}"
+            {% if l.id_lutador in amizades_ids %}checked{% endif %}>
+          {{ l.nome }}
+        </label>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</div>
+
+<label>Inimizades:</label>
+<div class="checkbox-container">
+  {% if lutadores|length == 0 %}
+    <p>Não há lutadores cadastrados.</p>
+  {% else %}
+    {% for l in lutadores %}
+      {% if l != lutador %}
+        <label>
+          <input type="checkbox" name="inimizades" value="{{ l.id_lutador }}"
+            {% if l.id_lutador in inimizades_ids %}checked{% endif %}>
+          {{ l.nome }}
+        </label>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</div>
+
+  <label>História:
+    <textarea name="historia">{{ lutador.historia }}</textarea>
+  </label>
+
+  <label>Golpes:</label>
+  {% if lutador.golpes.all %}
+    <ul>
+      {% for golpe in lutador.golpes.all %}
+        <li>
+          <button type="button" class="golpe-toggle" aria-expanded="false">{{ golpe.nome }}</button>
+          <div class="golpe-info" style="display:none; margin-left: 1rem;">
+            <p><strong>Tipo:</strong> {{ golpe.tipo }}</p>
+            <p><strong>Descrição:</strong> {{ golpe.descricao }}</p>
+            <p><strong>Força:</strong> {{ golpe.forca }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Sem golpes cadastrados.</p>
+  {% endif %}
+
+  <div class="conteudo2-botoes">
+    <button type="submit" class="conteudo2-botao">Editar</button>
+    <button type="button" class="conteudo2-botao-excluir" onclick="excluirLutador()">Excluir</button>
+  </div>
+</form>
+
+<form method="post" action="{% url 'remover_lutador' lutador.id_lutador %}" id="form-remover" style="display:none;">
+  {% csrf_token %}
+</form>
+
+</main>
+
+<script>
+  document.querySelectorAll('.golpe-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const info = button.nextElementSibling;
+      const isVisible = info.style.display === 'block';
+      info.style.display = isVisible ? 'none' : 'block';
+      button.setAttribute('aria-expanded', !isVisible);
+    });
+  });
+
+  function excluirLutador() {
+    if (confirm('Deseja realmente excluir este lutador?')) {
+      document.getElementById('form-remover').submit();
+    }
+  }
+</script>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Lista de Golpes{% endblock %}
+
+{% block content %}
+  <div class="conteudo-principal">
+    <h1 class="conteudo-principal-escrito-titulo">Lista de Golpes</h1>
+  </div>
+
+  <div class="conteudo-secundario">
+    {% if golpes %}
+      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; margin: 0 auto;">
+        {% for golpe in golpes %}
+          <li>
+            <a href="{% url 'ver_golpe' golpe.id_golpe %}" style="display: block; background-color: #8FBC8F; padding: 1rem; border-radius: 10px; box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25); text-decoration: none; color: #FFF2E7; transition: background-color 0.3s ease;">
+              <div><strong>Nome:</strong> {{ golpe.nome }}</div>
+              <div><strong>Descrição:</strong> {{ golpe.descricao }}</div>
+              <div><strong>Força:</strong> {{ golpe.forca }}</div>
+              <div><strong>Tipo:</strong> {{ golpe.tipo }}</div>
+              <div><strong>Lutador:</strong> {{ golpe.lutador.nome }}</div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="conteudo-secundario-paragrafo">Nenhum golpe encontrado.</p>
+    {% endif %}
+  </div>
+{% endblock %}

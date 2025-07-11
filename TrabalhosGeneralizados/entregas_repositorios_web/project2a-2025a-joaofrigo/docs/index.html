@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shrek Github Explorer</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+          <style>
+            body {
+                background-color: #e8f5e9; /* Light green background */
+                color: #333; /* Dark text color for better contrast */
+            }
+        
+            h3 {
+                color: #388e3c; /* Lighter green for header */
+            }
+        
+            .btn-primary {
+                background-color: #66bb6a; /* Softer green button */
+                border-color: #66bb6a;
+            }
+        
+            .btn-primary:hover {
+                background-color: #4caf50; /* Slightly darker green on hover */
+                border-color: #4caf50;
+            }
+        
+            .form-control {
+                background-color: #ffffff; /* White background for inputs */
+                color: #333; /* Dark text for inputs */
+                border-color: #81c784; /* Light green border */
+            }
+        
+            .form-control:focus {
+                border-color: #66bb6a; /* Softer green on focus */
+                box-shadow: 0 0 5px rgba(102, 187, 106, 0.5); /* Subtle green shadow on focus */
+            }
+        
+            .list-group-item {
+                background-color: #c8e6c9; /* Light green for list items */
+                border: 1px solid #81c784;
+            }
+        
+            .list-group-item:hover {
+                background-color: #a5d6a7; /* Slightly darker green on hover */
+            }
+        
+            footer {
+                text-align: center;
+                margin-top: 20px;
+            }
+        
+            footer img {
+                width: 200px; /* Adjust image size */
+                margin-top: 10px;
+            }
+        </style>
+        
+</head>
+<body>
+
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Explorar GitHub (com Shrek!)</h3>
+    <form id="gitHubForm" class="form-inline justify-content-center mb-4">
+        <div class="form-group mb-2">
+            <input id="usernameInput" class="form-control mr-2" type="text" placeholder="GitHub Username" required>
+        </div>
+        <div class="form-group mb-2">
+            <input id="repoInput" class="form-control mr-2" type="text" placeholder="Repository (opcional)">
+        </div>
+        <div class="form-group mb-2">
+            <input type="submit" class="btn btn-primary" value="Buscar">
+        </div>
+    </form>
+    <ul id="resultsList" class="list-group mx-auto" style="max-width: 700px;"></ul>
+</div>
+
+<!-- Shrek Image at the bottom -->
+<footer>
+    <p><strong>Shrek says:</strong> "Ogros tem camadas, Burro!"</p>
+    <img src="https://purepng.com/public/uploads/large/purepng.com-shrek-smileshrekcomputer-animatedfantasy-filmfairy-talebook-1701528653697k0vcj.png" alt="Shrek Image">
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

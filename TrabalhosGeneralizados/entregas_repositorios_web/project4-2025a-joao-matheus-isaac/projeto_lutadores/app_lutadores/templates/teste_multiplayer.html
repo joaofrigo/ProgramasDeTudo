@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+  <h2 id="status" style="color: red;">Esperando pareamento...</h2>
+
+  <div id="fila" style="color: red; margin-bottom: 10px;">
+    <strong>Fila de espera:</strong>
+    <ul id="fila-lista" style="margin-top: 5px; padding-left: 20px;"></ul>
+  </div>
+
+  <div id="messages" style="background-color:#fff; color:#000; border:1px solid #ccc; height:300px; overflow-y:auto; padding:5px;"></div>
+
+  <input id="messageInput" type="text" placeholder="Mensagem" style="color:#000; background-color:#fff;" disabled />
+  <button id="sendBtn" disabled>Enviar</button>
+</div>
+
+<script>
+(() => {
+  const proto = location.protocol === "https:" ? "wss" : "ws";
+  const ws = new WebSocket(`${proto}://${location.host}/ws/teste/pareamento/`);
+
+  const status = document.getElementById("status");
+  const filaLista = document.getElementById("fila-lista");
+  const messagesDiv = document.getElementById("messages");
+  const input = document.getElementById("messageInput");
+  const sendBtn = document.getElementById("sendBtn");
+
+  ws.onmessage = e => {
+    const data = JSON.parse(e.data);
+
+    if (data.start) {
+      status.textContent = `Jogo iniciado entre: ${data.players.join(" e ")}`;
+      status.style.color = "green";
+      input.disabled = false;
+      sendBtn.disabled = false;
+    }
+
+    if (data.message && !data.start) {
+      const p = document.createElement("p");
+      p.textContent = data.message;
+      p.style.margin = "2px 0";
+      messagesDiv.appendChild(p);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    if (data.queue) {
+      filaLista.innerHTML = "";
+      data.queue.forEach(nome => {
+        const li = document.createElement("li");
+        li.textContent = nome;
+        filaLista.appendChild(li);
+      });
+    }
+  };
+
+  sendBtn.onclick = () => {
+    const text = input.value.trim();
+    if (text) {
+      ws.send(JSON.stringify({ message: text }));
+      input.value = "";
+    }
+  };
+
+  input.addEventListener("keyup", e => {
+    if (e.key === "Enter") sendBtn.click();
+  });
+})();
+</script>
+{% endblock %}

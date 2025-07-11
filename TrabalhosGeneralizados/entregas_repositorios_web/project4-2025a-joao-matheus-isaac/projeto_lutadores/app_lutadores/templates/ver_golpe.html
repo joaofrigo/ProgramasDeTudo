@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Ver Golpe{% endblock %}
+
+{% block content %}
+<main class="conteudo2" style="max-width: 600px; margin: 2rem auto;">
+  <div class="conteudo-principal">
+  <h1 class="conteudo-principal-escrito-titulo">{{ golpe.nome }}</h1>
+</div>
+
+
+  <form method="post" action="{% url 'editar_golpe' golpe.id_golpe %}">
+    {% csrf_token %}
+
+    <label style="display: block; margin-bottom: 1rem;">Nome:
+      <input type="text" name="nome" value="{{ golpe.nome }}" required style="width: 100%; padding: 0.5rem; font-size: 1rem;"/>
+    </label>
+
+    <label style="display: block; margin-bottom: 1rem;">Descrição:
+      <textarea name="descricao" required style="width: 100%; height: 120px; padding: 0.5rem; font-size: 1rem;">{{ golpe.descricao }}</textarea>
+    </label>
+
+    <label style="display: block; margin-bottom: 1rem;">Força:
+      <select name="forca" required style="width: 100%; padding: 0.5rem; font-size: 1rem;">
+        <option value="leve" {% if golpe.forca == "leve" %}selected{% endif %}>Leve</option>
+        <option value="médio" {% if golpe.forca == "médio" %}selected{% endif %}>Médio</option>
+        <option value="forte" {% if golpe.forca == "forte" %}selected{% endif %}>Forte</option>
+      </select>
+    </label>
+
+    <label style="display: block; margin-bottom: 1rem;">Tipo:
+      <select name="tipo" required style="width: 100%; padding: 0.5rem; font-size: 1rem;">
+        <option value="braço" {% if golpe.tipo == "braço" %}selected{% endif %}>Braço</option>
+        <option value="perna" {% if golpe.tipo == "perna" %}selected{% endif %}>Perna</option>
+        <option value="cabeça" {% if golpe.tipo == "cabeça" %}selected{% endif %}>Cabeça</option>
+        <option value="especial" {% if golpe.tipo == "especial" %}selected{% endif %}>Especial</option>
+      </select>
+    </label>
+
+    <label style="display: block; margin-bottom: 1rem;">Lutador:
+      <select name="lutador" required style="width: 100%; padding: 0.5rem; font-size: 1rem;">
+        {% for lutador in lutadores %}
+          <option value="{{ lutador.id_lutador }}" {% if lutador.id_lutador == golpe.lutador.id_lutador %}selected{% endif %}>{{ lutador.nome }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+      <button type="submit" class="conteudo2-botao" style="flex: 1; max-width: 150px;">Editar</button>
+  </form>
+
+  <form action="{% url 'remover_golpe' golpe.id_golpe %}" method="post" style="flex: 1; max-width: 150px;" onsubmit="return confirm('Tem certeza que deseja remover este golpe?');">
+    {% csrf_token %}
+    <button type="submit" class="conteudo2-botao-excluir" style="width: 100%;">Remover Golpe</button>
+  </form>
+  </div>
+</main>
+
+
+
+
+{% endblock %}

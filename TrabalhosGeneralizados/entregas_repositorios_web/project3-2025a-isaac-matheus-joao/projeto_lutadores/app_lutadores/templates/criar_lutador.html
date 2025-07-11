@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Criar Lutador{% endblock %}
+{% block content %}
+{% for message in messages %}
+  {% if message.message == "Você já atingiu o limite de 2 lutadores." %}
+    <script>
+      alert("{{ message|escapejs }}");
+    </script>
+  {% endif %}
+{% endfor %}
+<main class="conteudo2">
+  <h1 class="cabecalho2-titulo">Criar Novo Lutador</h1>
+<form method="post">
+  {% csrf_token %}
+  
+  <label>Nome:
+    <input type="text" name="nome" required/>
+  </label>
+  
+  <label>Idade:
+    <input type="number" name="idade" min="-2147483648" max="2147483647" required/>
+  </label>
+  
+  <label>Profissão:
+    <input type="text" name="profissao"/>
+  </label>
+
+  <style>
+    .checkbox-container {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.5rem;
+      max-height: 150px;
+      overflow-y: auto;
+      width: 100%;
+      color: black;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    .checkbox-container label {
+      display: block;
+      padding: 0.25rem 0;
+      cursor: pointer;
+      color: black;
+      font-weight: normal;
+    }
+  </style>
+
+  <label>Amizades:</label>
+  <div class="checkbox-container">
+    {% if lutadores|length == 0 %}
+      <p>Não há lutadores cadastrados.</p>
+    {% else %}
+      {% for l in lutadores %}
+        <label>
+          <input type="checkbox" name="amizades" value="{{ l.id_lutador }}">
+          {{ l.nome }}
+        </label>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <label>Inimizades:</label>
+  <div class="checkbox-container">
+    {% if lutadores|length == 0 %}
+      <p>Não há lutadores cadastrados.</p>
+    {% else %}
+      {% for l in lutadores %}
+        <label>
+          <input type="checkbox" name="inimizades" value="{{ l.id_lutador }}">
+          {{ l.nome }}
+        </label>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <label>História:
+    <textarea name="historia"></textarea>
+  </label>
+
+  <div class="conteudo2-botoes">
+    <button type="submit" class="conteudo2-botao">Criar</button>
+  </div>
+</form>
+{% endblock %}

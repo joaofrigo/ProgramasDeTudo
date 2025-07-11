@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+<style>
+  .registro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+
+  .registro-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+  }
+
+  .registro-form label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #FFF2E7;
+  }
+
+  .registro-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    margin-top: 0.25rem;
+  }
+
+  .conteudo2-botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+</style>
+
+<div class="registro-container">
+  <form method="post" action="{% url 'registro' %}" class="registro-form">
+    {% csrf_token %}
+
+    <label>Nome:
+      <input type="text" name="nome" required />
+    </label>
+
+    <label>Email:
+      <input type="email" name="email" required />
+    </label>
+
+    <label>Senha:
+      <input type="password" name="senha" required />
+    </label>
+
+    <div class="conteudo2-botoes">
+      <button type="submit" class="conteudo2-botao">Entrar</button>
+    </div>
+</div>
+{% endblock %}

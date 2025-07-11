@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+  <div style="text-align: center;">
+    <a href="{% url 'home' %}">
+      <img class="rodape-imagem" src="{% static 'logofooter.webp' %}" alt="Logo Type Souls">
+    </a>
+  </div>
+
+  <header class="cabecalho">
+    <!-- sem cabeçalho, em comum, acredito -->
+  </header>
+
+  <main class="conteudo">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="rodape">
+    <a href="{% url 'home' %}">
+      <img class="rodape-imagem" src="{% static 'logofooter.webp' %}" alt="Logo Type Souls">
+    </a>
+  </footer>
+</body>
+</html>
